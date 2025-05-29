@@ -1,10 +1,3 @@
-Código a copiar
-
-3º Commit: Criar classe Aritmetica e adicionar método Somar()
--------------------------------------------------------------
-
-Ficheiro: Aritmetica.cs
-
     /// <summary>
     /// Implementa operações aritméticas.
     /// </summary>
@@ -16,22 +9,10 @@ Ficheiro: Aritmetica.cs
         }
     }
 
-
-4º Commit: Adicionar método Subtrair()
---------------------------------------
-
-Ficheiro: Aritmetica.cs
-
     public int Subtrair(int x, int y)
     {
         return x - y;
     }
-
-
-5º Commit: Adicionar comentários XML aos métodos Somar() e Subtrair()
----------------------------------------------------------------------
-
-Ficheiro: Aritmetica.cs
 
     /// <summary>
     /// Operação soma.
@@ -42,12 +23,6 @@ Ficheiro: Aritmetica.cs
     /// Operação subtração.
     /// </summary>
     /// <returns>Retorna o resultado da subtração de dois números.</returns>
-
-
-6º Commit: Adicionar método ConverterTemperatura()
---------------------------------------------------
-
-Ficheiro: Aritmetica.cs
 
     /// <summary>
     /// Tipo de conversão de temperatura a executar.
@@ -74,84 +49,7 @@ Ficheiro: Aritmetica.cs
         return -1;
     }
 
-
-8º Commit: Criar a classe Conversoes e mover método
----------------------------------------------------
-
-Ficheiro: Conversoes.cs
-
-    /// <summary>
-    /// Conversão de temperaturas.
-    /// </summary>
-    /// <param name="conversao">A conversão a efetuar.</param>
-    /// <param name="temperatura">A temperatua a converter.</param>
-    /// <returns>Retorna o resultado da conversão da temperatura.</returns>
-
-Ficheiro: Program.cs
-
-    Console.WriteLine($"4 + 2 = {Aritmetica.Somar(4, 2)}");
-    Console.WriteLine($"4 - 2 = {Aritmetica.Subtrair(4, 2)}");
-
-
-9º Commit: Acrescentar código para testar
------------------------------------------
-
-Ficheiro: Program.cs
-
-    double t1 = Conversoes.ConverterTemperatura(Conversoes.ConversaoTemperatura.CelsiusFahrenheit, 36);
-    double t2 = Conversoes.ConverterTemperatura(Conversoes.ConversaoTemperatura.FahrenheitCelsius, 100);
-
-    Console.WriteLine($"36º Celsius = {t1}º Fahrenheit");
-    Console.WriteLine($"100º Fahrenheit = {t2}º Celsius");
-
-
-10º Commit: Adicionar o método Multiplicar()
---------------------------------------------
-
-Ficheiro: Aritmetica.cs
-
-    /// <summary>
-    /// Operação de multiplicação.
-    /// </summary>
-    /// <returns>Retorna o resultado da multiplicação de dois números.</returns>
     public static int Multiplicar(int x, int y)
     {
         return x * y;
-    }
-
-
-11º Commit: Adicionar o método ConverterDistancias()
---------------------------------------------
-
-Ficheiro: Conversoes.cs
-
-    /// <summary>
-    /// Tipo de conversão de distâncias.
-    /// </summary>
-    public enum ConversaoDistancia
-    {
-        Nulo = 0,
-        MetrosMilhas,
-        MilhasMetros
-    }
-
-
-    /// <summary>
-    /// Conversão de distâncias.
-    /// </summary>
-    /// <param name="conversao">A conversão a efetuar.</param>
-    /// <param name="distancia">A distância a converter</param>
-    /// <returns>Retorna o resultado da conversão da distância.</returns>
-    public static double ConverterDistancias(ConversaoDistancia conversao, double distancia)
-    {
-        if (conversao == ConversaoDistancia.MetrosMilhas)
-        {
-            return distancia * 0.0006213712;
-        }
-        else if (conversao == ConversaoDistancia.MilhasMetros)
-        {
-            return distancia * 1609.344;
-        }
-
-        return -1;
     }
